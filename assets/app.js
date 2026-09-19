@@ -572,6 +572,63 @@
   }
 
   /* ==========================================================
+     Menu mobile — navegação por categoria
+     ========================================================== */
+  function initMobileMenu() {
+    var toggle = $(".nav-toggle");
+    var menu = $("#menu-mobile");
+    if (!toggle || !menu) return;
+
+    function setOpen(open) {
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Fechar menu de navegação" : "Abrir menu de navegação");
+      menu.hidden = !open;
+      menu.classList.toggle("is-open", open);
+      document.body.style.overflow = open ? "hidden" : "";
+    }
+
+    toggle.addEventListener("click", function () {
+      setOpen(toggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    // Fecha ao escolher uma seção
+    $$("a", menu).forEach(function (a) {
+      a.addEventListener("click", function () { setOpen(false); });
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    // Se a tela crescer, o menu de desktop volta e este fecha
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 1040 && toggle.getAttribute("aria-expanded") === "true") setOpen(false);
+    }, { passive: true });
+  }
+
+  /* ==========================================================
+     Serviços: 3 no mobile, resto sob demanda
+     ========================================================== */
+  function initCardsMore() {
+    var btn = $("[data-cards-more]");
+    var list = $("[data-services]");
+    if (!btn || !list) return;
+
+    btn.addEventListener("click", function () {
+      var expanded = list.classList.toggle("is-expanded");
+      btn.setAttribute("aria-expanded", expanded ? "true" : "false");
+      btn.textContent = expanded ? "Ver menos" : "Ver todos os 6 serviços";
+      if (!expanded) {
+        var top = list.getBoundingClientRect().top + window.scrollY - 90;
+        window.scrollTo({ top: top, behavior: reduced ? "auto" : "smooth" });
+      }
+    });
+  }
+
+  /* ==========================================================
      Botão flutuante + parallax do hero
      ========================================================== */
   function initScroll() {
@@ -648,6 +705,8 @@
     initFaq();
     initLightbox();
     initForm();
+    initMobileMenu();
+    initCardsMore();
     initScroll();
     initReveal();
   }

@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="preload" as="image" href="uploads/piscina1.jpg" />
-<link rel="stylesheet" href="assets/styles.css?v=3" />
+<link rel="stylesheet" href="assets/styles.css?v=5" />
 
 <!--
   GA4 / Google Ads — TODO_DADO_REAL: colar o ID de medição.
@@ -127,6 +127,7 @@
       <span class="brand__dot" aria-hidden="true"></span>
       <span class="brand__name">PGW <span>Piscinas</span></span>
     </a>
+
     <nav class="nav" aria-label="Navegação principal">
       <a href="#servicos">Serviços</a>
       <a href="#como-funciona">Como funciona</a>
@@ -134,8 +135,39 @@
       <a href="#estimativa">Estimativa</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
-    <a class="btn btn--cta btn--sm nav__cta" href="#orcamento">Pedir orçamento</a>
+
+    <div class="header__actions">
+      <a class="btn btn--wa btn--sm header__wa" href="#orcamento"
+         data-wa="header"
+         data-wa-msg="Olá! Vim pelo site da PGW Piscinas e quero falar sobre minha piscina."
+         aria-label="Falar com a PGW Piscinas no WhatsApp">
+        <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M.06 24l1.69-6.16A11.87 11.87 0 0 1 .15 11.9C.15 5.34 5.49 0 12.05 0a11.8 11.8 0 0 1 8.4 3.49 11.8 11.8 0 0 1 3.48 8.41c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.69-1.45L.06 24zm6.6-3.8c1.68.99 3.28 1.58 5.39 1.58 5.45 0 9.89-4.43 9.9-9.88a9.88 9.88 0 0 0-16.87-7 9.82 9.82 0 0 0-2.9 6.99c0 2.2.61 3.85 1.65 5.57l-1 3.65 3.83-1.01zm11.39-5.55c-.07-.12-.27-.2-.57-.35-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07a8.1 8.1 0 0 1-2.38-1.47 8.96 8.96 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.6.14-.14.3-.36.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41z"/></svg><span class="header__wa-text">WhatsApp</span>
+      </a>
+      <a class="btn btn--cta btn--sm nav__cta" href="#orcamento">Pedir orçamento</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu de navegação">
+        <span class="nav-toggle__box" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
   </div>
+
+  <!-- Navegação por categoria no mobile: a página é longa, então o menu
+       permite pular direto para a seção em vez de rolar tudo. -->
+  <nav class="menu-mobile" id="menu-mobile" aria-label="Navegação por seções" hidden>
+    <a href="#servicos"><span class="menu-mobile__n">01</span> Serviços</a>
+    <a href="#como-funciona"><span class="menu-mobile__n">02</span> Como funciona</a>
+    <a href="#galeria"><span class="menu-mobile__n">03</span> Galeria</a>
+    <a href="#estimativa"><span class="menu-mobile__n">04</span> Estimativa de preço</a>
+    <a href="#onde-atendemos"><span class="menu-mobile__n">05</span> Onde atendemos</a>
+    <a href="#duvidas"><span class="menu-mobile__n">06</span> Dúvidas frequentes</a>
+    <div class="menu-mobile__cta">
+      <a class="btn btn--cta btn--block" href="#orcamento">Pedir orçamento</a>
+      <a class="btn btn--wa btn--block" href="#orcamento"
+         data-wa="menu-mobile"
+         data-wa-msg="Olá! Vim pelo site da PGW Piscinas e quero falar sobre minha piscina.">
+        <svg class="ico-wa" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M.06 24l1.69-6.16A11.87 11.87 0 0 1 .15 11.9C.15 5.34 5.49 0 12.05 0a11.8 11.8 0 0 1 8.4 3.49 11.8 11.8 0 0 1 3.48 8.41c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.69-1.45L.06 24zm6.6-3.8c1.68.99 3.28 1.58 5.39 1.58 5.45 0 9.89-4.43 9.9-9.88a9.88 9.88 0 0 0-16.87-7 9.82 9.82 0 0 0-2.9 6.99c0 2.2.61 3.85 1.65 5.57l-1 3.65 3.83-1.01zm11.39-5.55c-.07-.12-.27-.2-.57-.35-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07a8.1 8.1 0 0 1-2.38-1.47 8.96 8.96 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.6.14-.14.3-.36.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41z"/></svg>Falar no WhatsApp
+      </a>
+    </div>
+  </nav>
 </header>
 
 <main>
@@ -226,7 +258,7 @@
     <p class="lede">Tratamento com dosagem medida, equipamento revisado e registro do que foi feito em cada visita. Escolha o ponto de partida:</p>
   </div>
 
-  <div class="cards" data-services>
+  <div class="cards" id="lista-servicos" data-services>
     <!-- cards injetados a partir de app.js SERVICES para manter fonte única;
          o conteúdo abaixo é o mesmo, escrito no HTML para SEO e no-JS. -->
     <article class="card" data-reveal data-reveal-delay="0">
@@ -262,7 +294,7 @@
          aria-label="Falar no WhatsApp sobre Manutenção mensal por contrato">Falar sobre este serviço →</a>
     </article>
 
-    <article class="card" data-reveal data-reveal-delay="240">
+    <article class="card" data-extra data-reveal data-reveal-delay="240">
       <span class="card__rule" aria-hidden="true"></span>
       <h3 class="card__title">Filtro, bomba e troca de areia</h3>
       <p class="card__text">Diagnóstico do recalque, limpeza interna do filtro, substituição da areia no prazo e ajuste de tempo de bombeamento.</p>
@@ -273,7 +305,7 @@
          aria-label="Falar no WhatsApp sobre Filtro, bomba e troca de areia">Falar sobre este serviço →</a>
     </article>
 
-    <article class="card" data-reveal data-reveal-delay="320">
+    <article class="card" data-extra data-reveal data-reveal-delay="320">
       <span class="card__rule" aria-hidden="true"></span>
       <h3 class="card__title">Aquecimento e automação</h3>
       <p class="card__text">Avaliação térmica do espelho d'água, dimensionamento de trocador ou bomba de calor e instalação com controle de temperatura.</p>
@@ -284,7 +316,7 @@
          aria-label="Falar no WhatsApp sobre Aquecimento e automação">Falar sobre este serviço →</a>
     </article>
 
-    <article class="card" data-reveal data-reveal-delay="400">
+    <article class="card" data-extra data-reveal data-reveal-delay="400">
       <span class="card__rule" aria-hidden="true"></span>
       <h3 class="card__title">Reforma e revestimento</h3>
       <p class="card__text">Recuperação de estrutura, troca de pastilha ou vinil, revisão de hidráulica e acabamento de borda.</p>
@@ -295,6 +327,10 @@
          aria-label="Falar no WhatsApp sobre Reforma e revestimento">Falar sobre este serviço →</a>
     </article>
   </div>
+
+  <button class="cards-more" type="button" data-cards-more aria-expanded="false" aria-controls="lista-servicos">
+    Ver todos os 6 serviços
+  </button>
 </section>
 
 <!-- ─────────────────────────  COMO FUNCIONA  ───────────────────────── -->
@@ -436,7 +472,7 @@
 </section>
 
 <!-- ─────────────────────────  ONDE ATENDEMOS  ───────────────────────── -->
-<section class="section split">
+<section class="section split" id="onde-atendemos">
   <div class="split__media" data-reveal>
     <img src="uploads/piscina4.jpg" alt="Piscina de borda em jardim arborizado, água azul e limpa sob o sol" loading="lazy" decoding="async" width="1200" height="1600" />
   </div>
@@ -670,6 +706,6 @@
   <img class="lightbox__img" alt="" />
 </div>
 
-<script src="assets/app.js?v=3" defer></script>
+<script src="assets/app.js?v=5" defer></script>
 </body>
 </html>

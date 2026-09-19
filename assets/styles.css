@@ -200,6 +200,8 @@ input, select, textarea, button { font: inherit; }
 }
 .btn--wa:hover { background: var(--green-dark); color: #fff; }
 
+.ico-wa { width: 1.15em; height: 1.15em; flex: 0 0 auto; }
+
 /* ============================================================
    HEADER
    ============================================================ */
@@ -252,8 +254,86 @@ input, select, textarea, button { font: inherit; }
 .nav a:hover { color: var(--blue); }
 .nav__cta { flex: 0 0 auto; white-space: nowrap; }
 
-/* Em telas estreitas a nav some — os CTAs e o botão flutuante cobrem a navegação. */
-@media (max-width: 860px) { .nav { display: none; } }
+.header__actions { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+
+.header__wa { background: var(--green); color: #fff; margin-top: 0; padding: 10px 16px; font-size: 14.5px; }
+.header__wa:hover { background: var(--green-dark); color: #fff; }
+
+/* ---------- botão hambúrguer ---------- */
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.nav-toggle__box { display: block; width: 18px; height: 12px; position: relative; }
+.nav-toggle__box span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform .3s var(--ease), opacity .2s ease, top .3s var(--ease);
+}
+.nav-toggle__box span:nth-child(1) { top: 0; }
+.nav-toggle__box span:nth-child(2) { top: 5px; }
+.nav-toggle__box span:nth-child(3) { top: 10px; }
+.nav-toggle[aria-expanded="true"] .nav-toggle__box span:nth-child(1) { top: 5px; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-toggle__box span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .nav-toggle__box span:nth-child(3) { top: 5px; transform: rotate(-45deg); }
+
+/* ---------- menu mobile ---------- */
+.menu-mobile {
+  display: none;
+  border-top: 1px solid var(--hairline);
+  background: rgba(242, 248, 251, .98);
+  backdrop-filter: blur(12px);
+  padding: 8px var(--gutter) 18px;
+  max-height: calc(100dvh - 68px);
+  overflow-y: auto;
+}
+.menu-mobile[hidden] { display: none; }
+.menu-mobile > a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 2px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16.5px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--hairline);
+}
+.menu-mobile > a:hover { color: var(--blue); }
+.menu-mobile__n {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--crystal);
+}
+.menu-mobile__cta { display: grid; gap: 10px; margin-top: 16px; }
+.menu-mobile__cta .btn { margin-top: 0; }
+
+/* ---------- breakpoints do header ---------- */
+@media (max-width: 1040px) {
+  .nav { display: none; }
+  .nav-toggle { display: flex; }
+  .js .menu-mobile.is-open { display: block; }
+}
+@media (max-width: 560px) {
+  /* Só o ícone do WhatsApp cabe; "Pedir orçamento" vive dentro do menu. */
+  .header__wa-text { display: none; }
+  .header__wa { padding: 11px 13px; }
+  .header__actions .nav__cta { display: none; }
+  .brand__name { font-size: 17px; }
+}
 
 /* ============================================================
    HERO
@@ -450,6 +530,26 @@ input, select, textarea, button { font: inherit; }
   transition: color .25s ease, gap .25s ease;
 }
 .card__link:hover { color: var(--cta-dark); gap: 11px; }
+
+.cards-more {
+  display: none;
+  width: 100%;
+  margin-top: 16px;
+  padding: 15px 20px;
+  border: 1px solid rgba(11, 110, 158, .3);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--blue);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background .25s ease, border-color .25s ease;
+}
+.cards-more:hover { background: var(--tint); border-color: var(--blue); }
 
 .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag {
@@ -958,6 +1058,40 @@ input, select, textarea, button { font: inherit; }
 /* Só esconde quando há JS para trazer de volta depois do hero. */
 .js .wa-float { opacity: 0; transform: translateY(16px); pointer-events: none; }
 .js .wa-float.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+/* ============================================================
+   COMPACTAÇÃO NO MOBILE
+   A página é longa; no telefone encurtamos o scroll sem tirar
+   conteúdo do HTML (SEO e no-JS continuam vendo tudo).
+   ============================================================ */
+@media (max-width: 720px) {
+  /* Galeria em 2 colunas: metade da altura */
+  .gallery { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .shot__cap { font-size: 11.5px; padding: 26px 10px 10px; line-height: 1.35; }
+
+  /* Serviços: 3 cards + botão para ver o resto (só quando há JS) */
+  .js .card[data-extra] { display: none; }
+  .js .cards.is-expanded .card[data-extra] { display: flex; }
+  .js .cards-more { display: flex; }
+
+  /* Respiro menor entre blocos */
+  :root { --block: 48px; }
+
+  /* Passos e trust em 2 colunas */
+  .steps { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .trust__inner { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Foto decorativa ao lado do formulário: no telefone ela só empurra o
+     formulário para baixo. A galeria já mostra o trabalho. */
+  .quote__media { display: none; }
+
+  /* Foto de "onde atendemos" mais baixa — é apoio, não conteúdo */
+  .split__media { aspect-ratio: 16 / 9; }
+}
+
+@media (max-width: 420px) {
+  .steps, .trust__inner { grid-template-columns: 1fr; }
+}
 
 /* ============================================================
    REVEAL ON SCROLL — aplicado só via JS (.is-hidden)
