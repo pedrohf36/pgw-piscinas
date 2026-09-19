@@ -13,6 +13,21 @@ uploads/            fotos das piscinas
 Rodar local: `py -3 -m http.server 5173` na raiz do projeto
 (ou o preview `pgw-piscinas` em `../.claude/launch.json`).
 
+## Deploy
+
+- **Site ao vivo:** https://pedrohf36.github.io/pgw-piscinas/
+- **Repositório:** https://github.com/pedrohf36/pgw-piscinas (público)
+- **Publicação:** GitHub Pages, branch `main`, raiz do repo. Todo `git push`
+  para `main` republica o site automaticamente (leva ~1 min).
+- Sem custo, sem build step — GitHub Pages serve os arquivos estáticos como
+  estão.
+
+### Fluxo de trabalho neste chat
+
+A cada mudança feita aqui, o commit e o push para `main` são automáticos —
+não é preciso pedir a cada vez. Isso publica a mudança no site ao vivo em
+seguida. Se algo não deveria ir ao ar ainda, avise antes da mudança.
+
 ## Configuração central
 
 **Todo dado comercial vive no objeto `business`, no topo de `assets/app.js`.**
