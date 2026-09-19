@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.className = "js";</script>
+
+<title>PGW Piscinas — limpeza e manutenção de piscinas em Campinas e região</title>
+<meta name="description" content="Limpeza, tratamento e manutenção de piscinas com atendimento a domicílio em Campinas e região. Dosagem calculada pelo volume real, registro de cada visita e orçamento após vistoria." />
+<meta name="robots" content="index,follow" />
+<meta name="theme-color" content="#06283B" />
+
+<!--
+  Canonical, og:url e og:image absoluta são injetados por assets/app.js a
+  partir de `business.website.url`. Enquanto esse campo estiver vazio nenhuma
+  URL é gerada — canonical apontando para domínio errado é pior do que
+  canonical nenhuma. Para publicar: preencher business.website.url no app.js.
+-->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="PGW Piscinas" />
+<meta property="og:title" content="PGW Piscinas — limpeza e manutenção de piscinas em Campinas e região" />
+<meta property="og:description" content="Piscina verde hoje, água cristalina antes do fim de semana. Atendimento a domicílio em Campinas e região, com dosagem pelo volume real da piscina." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="PGW Piscinas — limpeza e manutenção de piscinas em Campinas" />
+<meta name="twitter:description" content="Limpeza, tratamento e manutenção de piscinas com atendimento a domicílio em Campinas e região." />
+<meta name="geo.region" content="BR-SP" />
+<meta name="geo.placename" content="Campinas" />
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="uploads/piscina1.jpg" />
+<link rel="stylesheet" href="assets/styles.css?v=3" />
+
+<!--
+  GA4 / Google Ads — TODO_DADO_REAL: colar o ID de medição.
+  Os eventos já são disparados pelo app.js: whatsapp_click, form_submit, calculator_complete.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+-->
+
+<!--
+  LocalBusiness com os dados que existem de verdade: nome, telefone, horário e
+  área atendida. `address` e `priceRange` ficam de fora até virem do cliente —
+  structured data com placeholder é tratado como marcação enganosa.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "PGW Piscinas",
+  "description": "Limpeza, tratamento e manutenção de piscinas com atendimento a domicílio em Campinas e região.",
+  "telephone": "+5519981430763",
+  "areaServed": { "@type": "City", "name": "Campinas", "addressRegion": "SP", "addressCountry": "BR" },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  }],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpeza e tratamento semanal de piscina" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tratamento de piscina verde" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manutenção mensal por contrato" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manutenção de filtro, bomba e troca de areia" } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Vocês atendem no fim de semana?",
+      "acceptedAnswer": { "@type": "Answer", "text": "O atendimento é de segunda a sexta-feira, das 08:00 às 18:00. Casos de emergência (água verde, festa marcada) são tratados por ordem de chegada dentro dessa janela." }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês atendem em quais cidades?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Atendemos Campinas e região, a domicílio. Para confirmar se o seu endereço está na área de cobertura, chame no WhatsApp com o bairro e a cidade." }
+    },
+    {
+      "@type": "Question",
+      "name": "Em quanto tempo a água clareia?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depende do volume, do estado da água e do filtro. Uma piscina verde tratada com choque e filtragem contínua normalmente melhora de forma visível em 24 a 48 horas, com aspirações intermediárias." }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso comprar os produtos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nas visitas avulsas, os produtos podem entrar no orçamento ou ficar por conta do cliente. Nos planos por contrato, entram inclusos — a definição fica registrada na proposta." }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês atendem condomínio e empresa?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sim. Para PJ e condomínio enviamos proposta formal, com escopo, periodicidade e responsáveis técnicos descritos, além de nota fiscal." }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona a cobrança?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Serviço avulso é orçado após vistoria. Contrato mensal tem valor fixo definido pelo volume da piscina, frequência e tipo de tratamento." }
+    },
+    {
+      "@type": "Question",
+      "name": "A estimativa do site é o preço final?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Não. A calculadora mostra o volume de água e o escopo para orientar a conversa. O valor final sai depois da vistoria, porque estado da água, equipamento e acesso mudam o trabalho." }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#servicos">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="#top">
+      <span class="brand__dot" aria-hidden="true"></span>
+      <span class="brand__name">PGW <span>Piscinas</span></span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#estimativa">Estimativa</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn--cta btn--sm nav__cta" href="#orcamento">Pedir orçamento</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ─────────────────────────  HERO  ───────────────────────── -->
+<section class="hero" id="top">
+  <div class="hero__media" data-parallax></div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="badge">
+      <span class="badge__pulse" aria-hidden="true"></span>
+      <span data-hero="badge">Atendimento em Campinas e região</span>
+    </p>
+    <h1 class="hero__title" data-hero="title">Piscina verde hoje, água cristalina antes do fim de semana</h1>
+    <p class="hero__sub" data-hero="sub">Choque de cloro calculado pelo volume real da sua piscina, aspiração e filtragem acompanhada. Você manda uma foto da água; a gente já diz o que ela precisa.</p>
+
+    <div class="hero__actions">
+      <a class="btn btn--cta btn--lg"
+         href="#orcamento"
+         data-wa="hero"
+         data-wa-msg="Olá! Minha piscina está com a água ruim e preciso de atendimento. Pode me ajudar?"
+         aria-label="Falar com a PGW Piscinas no WhatsApp">
+        <span class="btn__icon" aria-hidden="true">💧</span>
+        <span data-hero="cta">Chamar no WhatsApp agora</span>
+      </a>
+      <a class="btn btn--ghost btn--lg" href="#estimativa">Calcular manutenção</a>
+    </div>
+
+    <ul class="paths">
+      <li><a href="#servicos">
+        <span class="paths__tag">Emergência</span>
+        <span class="paths__text">Água verde ou turva e prazo curto — resolvemos primeiro, orçamos depois.</span>
+      </a></li>
+      <li><a href="#estimativa">
+        <span class="paths__tag">Recorrência</span>
+        <span class="paths__text">Quer alguém cuidando todo mês? Calcule a manutenção em 20 segundos.</span>
+      </a></li>
+      <li><a href="#orcamento">
+        <span class="paths__tag">Projeto</span>
+        <span class="paths__text">Reforma, aquecimento ou automação: vistoria técnica antes da proposta.</span>
+      </a></li>
+    </ul>
+  </div>
+  <span class="hero__cue" aria-hidden="true">↓</span>
+</section>
+
+<div class="rule-gradient" role="presentation"></div>
+
+<!-- ─────────────────────────  TRUST  ───────────────────────── -->
+<section class="trust" aria-label="Como trabalhamos">
+  <div class="trust__inner">
+    <div class="trust__item" data-reveal>
+      <span class="trust__mark">01</span>
+      <div>
+        <h2 class="trust__title">Dosagem pelo volume real</h2>
+        <p class="trust__text">Cálculo pela cubagem da piscina, não pelo olho.</p>
+      </div>
+    </div>
+    <div class="trust__item" data-reveal>
+      <span class="trust__mark">02</span>
+      <div>
+        <h2 class="trust__title">Registro de cada visita</h2>
+        <p class="trust__text">pH, cloro e o que foi feito, por escrito.</p>
+      </div>
+    </div>
+    <div class="trust__item" data-reveal>
+      <span class="trust__mark">03</span>
+      <div>
+        <h2 class="trust__title">Orçamento após vistoria</h2>
+        <p class="trust__text">Nada de valor cravado antes de ver a água.</p>
+      </div>
+    </div>
+    <div class="trust__item" data-reveal>
+      <span class="trust__mark">04</span>
+      <div>
+        <h2 class="trust__title">Atendimento a domicílio</h2>
+        <p class="trust__text">Equipe própria, com equipamento levado na visita.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────  SERVIÇOS  ───────────────────────── -->
+<section class="section" id="servicos">
+  <div class="section__head" data-reveal>
+    <p class="eyebrow">Serviços</p>
+    <h2 class="h2">Da água verde ao cristal — e do cristal, todo mês assim</h2>
+    <p class="lede">Tratamento com dosagem medida, equipamento revisado e registro do que foi feito em cada visita. Escolha o ponto de partida:</p>
+  </div>
+
+  <div class="cards" data-services>
+    <!-- cards injetados a partir de app.js SERVICES para manter fonte única;
+         o conteúdo abaixo é o mesmo, escrito no HTML para SEO e no-JS. -->
+    <article class="card" data-reveal data-reveal-delay="0">
+      <span class="card__rule" aria-hidden="true"></span>
+      <h3 class="card__title">Piscina verde em 1 dia</h3>
+      <p class="card__text">Choque de cloro calculado pelo volume real, correção de pH e alcalinidade, aspiração e filtragem contínua até a água voltar a ficar transparente.</p>
+      <p class="tags"><span class="tag">Emergência</span><span class="tag">Água turva ou verde</span></p>
+      <a class="card__link" href="#orcamento"
+         data-wa="servico" data-wa-service="Piscina verde em 1 dia"
+         data-wa-msg='Olá! Vi no site o serviço "Piscina verde em 1 dia" e quero mais informações.'
+         aria-label="Falar no WhatsApp sobre Piscina verde em 1 dia">Falar sobre este serviço →</a>
+    </article>
+
+    <article class="card" data-reveal data-reveal-delay="80">
+      <span class="card__rule" aria-hidden="true"></span>
+      <h3 class="card__title">Limpeza e tratamento semanal</h3>
+      <p class="card__text">Visita fixa com aspiração, escovação de paredes, limpeza de bordas e cesto, dosagem medida e leitura registrada de pH e cloro.</p>
+      <p class="tags"><span class="tag">Rotina</span><span class="tag">Registro por visita</span></p>
+      <a class="card__link" href="#orcamento"
+         data-wa="servico" data-wa-service="Limpeza e tratamento semanal"
+         data-wa-msg='Olá! Vi no site o serviço "Limpeza e tratamento semanal" e quero mais informações.'
+         aria-label="Falar no WhatsApp sobre Limpeza e tratamento semanal">Falar sobre este serviço →</a>
+    </article>
+
+    <article class="card" data-reveal data-reveal-delay="160">
+      <span class="card__rule" aria-hidden="true"></span>
+      <h3 class="card__title">Manutenção mensal por contrato</h3>
+      <p class="card__text">Plano contínuo com produtos inclusos, acompanhamento do equipamento e prioridade no atendimento fora de rotina.</p>
+      <p class="tags"><span class="tag">Contrato</span><span class="tag">Produtos inclusos</span></p>
+      <a class="card__link" href="#orcamento"
+         data-wa="servico" data-wa-service="Manutenção mensal por contrato"
+         data-wa-msg='Olá! Vi no site o serviço "Manutenção mensal por contrato" e quero mais informações.'
+         aria-label="Falar no WhatsApp sobre Manutenção mensal por contrato">Falar sobre este serviço →</a>
+    </article>
+
+    <article class="card" data-reveal data-reveal-delay="240">
+      <span class="card__rule" aria-hidden="true"></span>
+      <h3 class="card__title">Filtro, bomba e troca de areia</h3>
+      <p class="card__text">Diagnóstico do recalque, limpeza interna do filtro, substituição da areia no prazo e ajuste de tempo de bombeamento.</p>
+      <p class="tags"><span class="tag">Equipamento</span><span class="tag">Consumo de energia</span></p>
+      <a class="card__link" href="#orcamento"
+         data-wa="servico" data-wa-service="Filtro, bomba e troca de areia"
+         data-wa-msg='Olá! Vi no site o serviço "Filtro, bomba e troca de areia" e quero mais informações.'
+         aria-label="Falar no WhatsApp sobre Filtro, bomba e troca de areia">Falar sobre este serviço →</a>
+    </article>
+
+    <article class="card" data-reveal data-reveal-delay="320">
+      <span class="card__rule" aria-hidden="true"></span>
+      <h3 class="card__title">Aquecimento e automação</h3>
+      <p class="card__text">Avaliação térmica do espelho d'água, dimensionamento de trocador ou bomba de calor e instalação com controle de temperatura.</p>
+      <p class="tags"><span class="tag">Projeto</span><span class="tag">Uso no inverno</span></p>
+      <a class="card__link" href="#orcamento"
+         data-wa="servico" data-wa-service="Aquecimento e automação"
+         data-wa-msg='Olá! Vi no site o serviço "Aquecimento e automação" e quero mais informações.'
+         aria-label="Falar no WhatsApp sobre Aquecimento e automação">Falar sobre este serviço →</a>
+    </article>
+
+    <article class="card" data-reveal data-reveal-delay="400">
+      <span class="card__rule" aria-hidden="true"></span>
+      <h3 class="card__title">Reforma e revestimento</h3>
+      <p class="card__text">Recuperação de estrutura, troca de pastilha ou vinil, revisão de hidráulica e acabamento de borda.</p>
+      <p class="tags"><span class="tag">Obra</span><span class="tag">Vistoria antes</span></p>
+      <a class="card__link" href="#orcamento"
+         data-wa="servico" data-wa-service="Reforma e revestimento"
+         data-wa-msg='Olá! Vi no site o serviço "Reforma e revestimento" e quero mais informações.'
+         aria-label="Falar no WhatsApp sobre Reforma e revestimento">Falar sobre este serviço →</a>
+    </article>
+  </div>
+</section>
+
+<!-- ─────────────────────────  COMO FUNCIONA  ───────────────────────── -->
+<section class="band" id="como-funciona">
+  <div class="section">
+    <div class="steps__head" data-reveal>
+      <h2 class="h2 h2--tight">Quatro passos, sem surpresa no meio</h2>
+      <a class="link-arrow" href="#orcamento">Começar agora →</a>
+    </div>
+    <ol class="steps">
+      <li class="step" data-reveal data-reveal-delay="0">
+        <span class="step__n">1</span>
+        <h3 class="step__title">Você manda a foto da água</h3>
+        <p class="step__text">Pelo WhatsApp ou pelo formulário. Já dá para adiantar o diagnóstico.</p>
+      </li>
+      <li class="step" data-reveal data-reveal-delay="90">
+        <span class="step__n">2</span>
+        <h3 class="step__title">Vistoria e escopo</h3>
+        <p class="step__text">Medimos o volume, testamos a água e checamos filtro e bomba.</p>
+      </li>
+      <li class="step" data-reveal data-reveal-delay="180">
+        <span class="step__n">3</span>
+        <h3 class="step__title">Orçamento por escrito</h3>
+        <p class="step__text">Escopo, prazo e valor. Você aprova antes de começar.</p>
+      </li>
+      <li class="step" data-reveal data-reveal-delay="270">
+        <span class="step__n">4</span>
+        <h3 class="step__title">Execução e rotina</h3>
+        <p class="step__text">Serviço executado e, se quiser, visita fixa a partir dali.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ─────────────────────────  GALERIA  ───────────────────────── -->
+<section class="section" id="galeria">
+  <div class="section__head" data-reveal>
+    <p class="eyebrow">Galeria</p>
+    <h2 class="h2">Água tratada tem cara. É esta.</h2>
+    <p class="lede">Fotos de piscinas atendidas pela equipe. Toque para ampliar.</p>
+  </div>
+
+  <div class="gallery">
+    <figure class="shot" data-reveal data-reveal-delay="0">
+      <button class="shot__btn" type="button" data-lightbox="uploads/piscina1.jpg">
+        <img src="uploads/piscina1.jpg" alt="Piscina revestida em pastilha esmeralda com spa integrado e água transparente" loading="lazy" decoding="async" width="900" height="1600" />
+        <figcaption class="shot__cap">Piscina revestida em pastilha esmeralda com spa integrado e água transparente</figcaption>
+      </button>
+    </figure>
+    <figure class="shot" data-reveal data-reveal-delay="70">
+      <button class="shot__btn" type="button" data-lightbox="uploads/piscina4.jpg">
+        <img src="uploads/piscina4.jpg" alt="Piscina em área arborizada com água azul e superfície limpa" loading="lazy" decoding="async" width="1200" height="1600" />
+        <figcaption class="shot__cap">Piscina em área arborizada com água azul e superfície limpa</figcaption>
+      </button>
+    </figure>
+    <figure class="shot" data-reveal data-reveal-delay="140">
+      <button class="shot__btn" type="button" data-lightbox="uploads/piscina3.jpg">
+        <img src="uploads/piscina3.jpg" alt="Piscina com prainha e banco submerso em área de descanso coberta" loading="lazy" decoding="async" width="900" height="1600" />
+        <figcaption class="shot__cap">Piscina com prainha e banco submerso em área de descanso coberta</figcaption>
+      </button>
+    </figure>
+    <figure class="shot" data-reveal data-reveal-delay="210">
+      <button class="shot__btn" type="button" data-lightbox="uploads/piscina2.jpg">
+        <img src="uploads/piscina2.jpg" alt="Piscina de raia com pastilha azul e água sem partículas em suspensão" loading="lazy" decoding="async" width="900" height="1600" />
+        <figcaption class="shot__cap">Piscina de raia com pastilha azul e água sem partículas em suspensão</figcaption>
+      </button>
+    </figure>
+  </div>
+</section>
+
+<!-- ─────────────────────────  ESTIMATIVA  ───────────────────────── -->
+<section class="calc" id="estimativa">
+  <div class="calc__inner">
+    <div data-reveal>
+      <p class="eyebrow eyebrow--light">Estimativa</p>
+      <h2 class="h2 h2--light">Quanto custa manter a sua piscina?</h2>
+      <p class="lede lede--light">Informe as medidas e a rotina desejada. Devolvemos o volume real de água e o escopo de atendimento — o valor final sai depois da vistoria, porque tratar 20 mil litros à sombra não é o mesmo que 60 mil litros sob árvore.</p>
+
+      <form class="calc__form" novalidate>
+        <div class="calc__dims">
+          <label class="field">
+            <span class="field__label">Comprimento (m)</span>
+            <input class="field__input field__input--dark" type="text" inputmode="decimal" autocomplete="off" value="8" id="calc-length" aria-describedby="calc-hint" />
+          </label>
+          <label class="field">
+            <span class="field__label">Largura (m)</span>
+            <input class="field__input field__input--dark" type="text" inputmode="decimal" autocomplete="off" value="4" id="calc-width" aria-describedby="calc-hint" />
+          </label>
+          <label class="field">
+            <span class="field__label">Prof. média (m)</span>
+            <input class="field__input field__input--dark" type="text" inputmode="decimal" autocomplete="off" value="1,4" id="calc-depth" aria-describedby="calc-hint" />
+          </label>
+        </div>
+        <p class="calc__hint" id="calc-hint">Medidas em metros. Pode usar vírgula: 1,4</p>
+
+        <fieldset class="pills">
+          <legend class="field__label">Frequência de visita</legend>
+          <div class="pills__row" role="radiogroup" aria-label="Frequência de visita">
+            <button class="pill is-active" type="button" role="radio" aria-checked="true"  data-freq="semanal">Semanal</button>
+            <button class="pill"           type="button" role="radio" aria-checked="false" data-freq="quinzenal">Quinzenal</button>
+            <button class="pill"           type="button" role="radio" aria-checked="false" data-freq="mensal">Mensal</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="pills">
+          <legend class="field__label">Tratamento</legend>
+          <div class="pills__row" role="radiogroup" aria-label="Tratamento">
+            <button class="pill is-active" type="button" role="radio" aria-checked="true"  data-treat="cloro">Cloro</button>
+            <button class="pill"           type="button" role="radio" aria-checked="false" data-treat="sal">Sistema de sal</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="summary" data-reveal data-reveal-delay="140">
+      <p class="eyebrow eyebrow--light">Seu resumo</p>
+      <p class="summary__volume"><span data-calc="volume">44.800</span><span class="summary__unit"> litros</span></p>
+      <p class="summary__caption">Volume estimado de água a tratar</p>
+      <hr class="summary__hr" />
+      <dl class="summary__lines">
+        <div class="summary__line"><dt>Medidas informadas</dt><dd data-calc="dims">8 × 4 × 1.4 m</dd></div>
+        <div class="summary__line"><dt>Frequência</dt><dd data-calc="freq">Semanal</dd></div>
+        <div class="summary__line"><dt>Tratamento</dt><dd data-calc="treat">Cloro</dd></div>
+        <div class="summary__line"><dt>Escopo por visita</dt><dd>Aspiração, escovação, dosagem e leitura</dd></div>
+      </dl>
+
+      <!-- Valor calculado em app.js: litros/1000 × R$/1.000 L, com piso mínimo. -->
+      <div class="price" data-calc="price">
+        <p class="price__label">Estimativa por mês</p>
+        <p class="price__value" data-calc="price-value">R$ 538</p>
+        <p class="price__note">Valor aproximado, para orientar a conversa. O preço final é definido após a vistoria e varia conforme tamanho da piscina, estado da água, frequência, tipo de tratamento e condições de acesso.</p>
+      </div>
+
+      <a class="btn btn--cta btn--block" href="#orcamento" data-wa="calculadora"
+         aria-label="Solicitar orçamento no WhatsApp com os dados da calculadora">Solicitar orçamento no WhatsApp →</a>
+      <p class="summary__note">Abre o WhatsApp já com as medidas e a estimativa escritas. Você só confirma.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────  ONDE ATENDEMOS  ───────────────────────── -->
+<section class="section split">
+  <div class="split__media" data-reveal>
+    <img src="uploads/piscina4.jpg" alt="Piscina de borda em jardim arborizado, água azul e limpa sob o sol" loading="lazy" decoding="async" width="1200" height="1600" />
+  </div>
+  <div data-reveal data-reveal-delay="120">
+    <p class="eyebrow">Onde atendemos</p>
+    <h2 class="h2 h2--sm">Atendimento a domicílio, por região</h2>
+    <p class="lede">Cada região tem sua particularidade: dureza da água, queda de folhas, incidência de sol. O plano de tratamento acompanha isso.</p>
+    <p class="area__lead"><strong data-business="area">Campinas e região</strong> — atendimento a domicílio, com equipe e equipamento próprios.</p>
+
+    <!-- Lista renderizada por app.js quando business.cities tiver itens.
+         Fica vazia de propósito: publicar nome de cidade sem bairro, fator
+         técnico local e caso real vira doorway page. -->
+    <ul class="area__cities" data-city-list hidden></ul>
+
+    <p class="area__note">Não sabe se a sua região está coberta? Chame no WhatsApp com o bairro e a cidade — respondemos na hora, dentro do horário de atendimento.</p>
+  </div>
+</section>
+
+<!-- ─────────────────────────  DÚVIDAS  ───────────────────────── -->
+<section class="band" id="duvidas">
+  <div class="section section--narrow">
+    <h2 class="h2 faq__head" data-reveal>Perguntas que todo mundo faz</h2>
+
+    <div class="faq">
+      <div class="faq__item is-open" data-reveal>
+        <h3><button class="faq__q" type="button" aria-expanded="true" aria-controls="faq-a-1" id="faq-q-1">
+          Vocês atendem no fim de semana?<span class="faq__icon" aria-hidden="true">+</span>
+        </button></h3>
+        <div class="faq__answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+          <p>O atendimento é de <span data-business="horario">segunda a sexta-feira, das 08:00 às 18:00</span>. Casos de emergência (água verde, festa marcada) são tratados por ordem de chegada dentro dessa janela.</p>
+        </div>
+      </div>
+
+      <div class="faq__item" data-reveal>
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2">
+          Em quanto tempo a água clareia?<span class="faq__icon" aria-hidden="true">+</span>
+        </button></h3>
+        <div class="faq__answer" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+          <p>Depende do volume, do estado da água e do filtro. Uma piscina verde tratada com choque e filtragem contínua normalmente melhora de forma visível em 24 a 48 horas, com aspirações intermediárias.</p>
+        </div>
+      </div>
+
+      <div class="faq__item" data-reveal>
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3">
+          Preciso comprar os produtos?<span class="faq__icon" aria-hidden="true">+</span>
+        </button></h3>
+        <div class="faq__answer" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+          <p>Nas visitas avulsas, os produtos podem entrar no orçamento ou ficar por conta do cliente. Nos planos por contrato, entram inclusos — a definição fica registrada na proposta.</p>
+        </div>
+      </div>
+
+      <div class="faq__item" data-reveal>
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4">
+          Vocês atendem condomínio e empresa?<span class="faq__icon" aria-hidden="true">+</span>
+        </button></h3>
+        <div class="faq__answer" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
+          <p>Sim. Para PJ e condomínio enviamos proposta formal, com escopo, periodicidade e responsáveis técnicos descritos, além de nota fiscal.</p>
+        </div>
+      </div>
+
+      <div class="faq__item" data-reveal>
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-5" id="faq-q-5">
+          Como funciona a cobrança?<span class="faq__icon" aria-hidden="true">+</span>
+        </button></h3>
+        <div class="faq__answer" id="faq-a-5" role="region" aria-labelledby="faq-q-5">
+          <p>Serviço avulso é orçado após vistoria. Contrato mensal tem valor fixo definido pelo volume da piscina, frequência e tipo de tratamento.</p>
+        </div>
+      </div>
+
+      <div class="faq__item" data-reveal>
+        <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-6" id="faq-q-6">
+          A estimativa do site é o preço final?<span class="faq__icon" aria-hidden="true">+</span>
+        </button></h3>
+        <div class="faq__answer" id="faq-a-6" role="region" aria-labelledby="faq-q-6">
+          <p>Não. A calculadora mostra o volume de água e o escopo para orientar a conversa. O valor final sai depois da vistoria, porque estado da água, equipamento e acesso mudam o trabalho.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────  ORÇAMENTO  ───────────────────────── -->
+<section class="quote" id="orcamento">
+  <div class="quote__inner">
+    <div data-reveal>
+      <p class="eyebrow">Orçamento</p>
+      <h2 class="h2">Quatro campos. O resto a gente pergunta na vistoria.</h2>
+      <p class="lede">Prefere resolver agora, por mensagem? O WhatsApp abre com o assunto já escrito.</p>
+      <div class="quote__media">
+        <img src="uploads/piscina3.jpg" alt="Piscina com pastilha esmeralda, prainha e área de descanso coberta" loading="lazy" decoding="async" width="900" height="1600" />
+      </div>
+    </div>
+
+    <div class="panel" data-reveal data-reveal-delay="120">
+      <!-- Handoff: usado enquanto business.leadEndpoint estiver vazio.
+           Não afirma que o pedido foi recebido, porque não há backend
+           recebendo nada — leva o lead para o WhatsApp já preenchido. -->
+      <div class="panel__success" data-form="handoff" hidden>
+        <p class="panel__check" aria-hidden="true">✓</p>
+        <h3 class="panel__title">Tudo pronto. Falta só enviar.</h3>
+        <p class="panel__text">Montamos a mensagem com os seus dados. Toque no botão abaixo para abrir o WhatsApp e enviar — é assim que o seu pedido chega até a equipe.</p>
+        <a class="btn btn--wa" href="#orcamento" data-wa="form-sucesso">Enviar no WhatsApp</a>
+        <p class="panel__fine">Atendimento <span data-business="horario">de segunda a sexta-feira, das 08:00 às 18:00</span>.</p>
+      </div>
+
+      <!-- Sucesso real: só aparece quando o POST para leadEndpoint retorna OK. -->
+      <div class="panel__success" data-form="success" hidden>
+        <p class="panel__check" aria-hidden="true">✓</p>
+        <h3 class="panel__title">Recebemos seu pedido</h3>
+        <p class="panel__text">Respondemos no horário de atendimento. Se preferir adiantar, chame agora no WhatsApp — leva menos de um minuto.</p>
+        <a class="btn btn--wa" href="#orcamento" data-wa="form-sucesso">Chamar no WhatsApp agora</a>
+        <p class="panel__fine">Atendimento <span data-business="horario">de segunda a sexta-feira, das 08:00 às 18:00</span>.</p>
+      </div>
+
+      <form class="form" data-form="quote" novalidate>
+        <label class="field">
+          <span class="field__label">Nome</span>
+          <input class="field__input" type="text" name="name" placeholder="Como podemos te chamar" autocomplete="name" required />
+        </label>
+        <label class="field">
+          <span class="field__label">WhatsApp</span>
+          <input class="field__input" type="tel" name="phone" inputmode="numeric" placeholder="(00) 00000-0000" autocomplete="tel" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Cidade / bairro</span>
+          <input class="field__input" type="text" name="city" placeholder="Onde fica a piscina" autocomplete="address-level2" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Serviço</span>
+          <select class="field__input" name="service">
+            <option>Limpeza e tratamento semanal</option>
+            <option>Piscina verde em 1 dia</option>
+            <option>Manutenção mensal por contrato</option>
+            <option>Filtro, bomba e troca de areia</option>
+            <option>Aquecimento e automação</option>
+            <option>Reforma e revestimento</option>
+          </select>
+        </label>
+
+        <!-- honeypot anti-spam: invisível para humanos, tentador para robôs -->
+        <div class="hp" aria-hidden="true">
+          <label>Não preencha este campo
+            <input type="text" name="website" tabindex="-1" autocomplete="off" />
+          </label>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" name="consent" required />
+          <span>Autorizo o contato da PGW Piscinas por WhatsApp, telefone ou e-mail para tratar deste orçamento. Meus dados não são usados para outra finalidade nem repassados. <a href="#privacidade">Política de privacidade</a>.</span>
+        </label>
+
+        <p class="form__error" data-form="error" role="alert" hidden></p>
+        <p class="form__error-wa" data-form="error-wa" hidden>
+          <a class="btn btn--wa btn--block" href="#orcamento" data-wa="form-erro">Falar no WhatsApp</a>
+        </p>
+
+        <button class="btn btn--cta btn--block btn--submit" type="submit">Quero meu orçamento</button>
+        <p class="form__note">Sem cadastro, sem ligação automática. Você recebe uma resposta de pessoa, <span data-business="horario">de segunda a sexta-feira, das 08:00 às 18:00</span>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────  CTA FINAL  ───────────────────────── -->
+<section class="closer">
+  <div class="closer__media" aria-hidden="true"></div>
+  <div class="closer__scrim" aria-hidden="true"></div>
+  <div class="closer__inner" data-reveal>
+    <h2 class="h2 h2--light h2--xl">Sua piscina pode estar pronta para o fim de semana.</h2>
+    <p class="lede lede--light">Mande uma foto da água pelo WhatsApp. Em geral já dá para dizer o que ela precisa antes de qualquer visita.</p>
+    <div class="closer__actions">
+      <a class="btn btn--cta btn--lg" href="#orcamento"
+         data-wa="cta_final"
+         data-wa-msg="Olá! Vou mandar uma foto da minha piscina para vocês avaliarem."
+         aria-label="Enviar foto da piscina pelo WhatsApp">Mandar foto no WhatsApp</a>
+      <a class="btn btn--outline btn--lg" href="#orcamento">Preencher o formulário</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" id="privacidade">
+  <div class="footer__inner">
+    <div>
+      <p class="footer__brand">
+        <span class="footer__dot" aria-hidden="true"></span>
+        <span>PGW Piscinas</span>
+      </p>
+      <p class="footer__text">Limpeza, tratamento e manutenção de piscinas. Atendimento a domicílio em <span data-business="area">Campinas e região</span>.</p>
+    </div>
+    <div>
+      <h2 class="footer__h">Contato</h2>
+      <ul class="footer__list">
+        <li><a href="#orcamento" data-wa="footer" data-business-wa>WhatsApp <span data-business="whatsapp">+55 19 98143-0763</span></a></li>
+        <li>Horário: <span data-business="horario">segunda a sexta-feira, das 08:00 às 18:00</span></li>
+        <li>Área atendida: <span data-business="area">Campinas e região</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer__h">Site</h2>
+      <ul class="footer__list">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#estimativa">Estimativa de manutenção</a></li>
+        <li><a href="#orcamento">Pedir orçamento</a></li>
+        <li><a href="#duvidas">Dúvidas frequentes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer__h">Legal</h2>
+      <ul class="footer__list">
+        <li>Política de privacidade — em elaboração</li>
+        <li>Termos de uso — em elaboração</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bar">
+    <div class="footer__copy">© 2026 PGW Piscinas. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="#orcamento" data-wa="flutuante"
+   data-wa-msg="Olá! Vim pelo site e quero falar sobre minha piscina."
+   aria-label="Falar com a PGW Piscinas no WhatsApp">
+  <span class="wa-float__pulse" aria-hidden="true"></span>
+  Falar no WhatsApp
+</a>
+
+<div class="lightbox" data-lightbox-root hidden>
+  <button class="lightbox__close" type="button" aria-label="Fechar foto ampliada">×</button>
+  <img class="lightbox__img" alt="" />
+</div>
+
+<script src="assets/app.js?v=3" defer></script>
+</body>
+</html>
