@@ -15,18 +15,28 @@ Rodar local: `py -3 -m http.server 5173` na raiz do projeto
 
 ## Deploy
 
-- **Site ao vivo:** https://pedrohf36.github.io/pgw-piscinas/
+O site está publicado em dois lugares (mesmo conteúdo):
+
+- **Vercel (principal):** https://pgw-piscinas.vercel.app
+  Projeto `pgw1/pgw-piscinas`, conta hpedro112-6402. Sem integração automática
+  com o GitHub (a conta Vercel não tem login GitHub conectado), então cada
+  mudança exige rodar `vercel --prod --yes` na raiz do projeto — isso faz
+  parte do fluxo de commit automático abaixo.
+- **GitHub Pages (backup):** https://pedrohf36.github.io/pgw-piscinas/
+  Branch `main`, raiz do repo. Continua publicando sozinho a cada `git push`.
 - **Repositório:** https://github.com/pedrohf36/pgw-piscinas (público)
-- **Publicação:** GitHub Pages, branch `main`, raiz do repo. Todo `git push`
-  para `main` republica o site automaticamente (leva ~1 min).
-- Sem custo, sem build step — GitHub Pages serve os arquivos estáticos como
-  estão.
+- **Domínio próprio (pgwpiscinas.com):** ainda não registrado. Quando for
+  comprado, conectar em vercel.com → projeto pgw-piscinas → Settings →
+  Domains. O Vercel mostra os registros DNS exatos (geralmente um `A` ou
+  `CNAME` para `cname.vercel-dns.com`) — precisa ser adicionado no painel do
+  registrador onde o domínio for comprado.
 
 ### Fluxo de trabalho neste chat
 
-A cada mudança feita aqui, o commit e o push para `main` são automáticos —
-não é preciso pedir a cada vez. Isso publica a mudança no site ao vivo em
-seguida. Se algo não deveria ir ao ar ainda, avise antes da mudança.
+A cada mudança feita aqui: commit + push para `main` (publica no GitHub
+Pages sozinho) **e** `vercel --prod --yes` (publica no Vercel) — os dois
+automáticos, sem precisar pedir a cada vez. Se algo não deveria ir ao ar
+ainda, avise antes da mudança.
 
 ## Configuração central
 
@@ -45,7 +55,7 @@ para SEO/no-JS; o `app.js` reinjeta nos pontos marcados com `data-business="…"
 | `pricing.per1000Liters` | 12 |
 | `pricing.minimumPrice` | 250 |
 | `leadEndpoint` | `""` — sem backend ainda |
-| `website.url` | `""` — sem domínio ainda |
+| `website.url` | `https://pgw-piscinas.vercel.app` — domínio próprio ainda não registrado |
 
 ### Unidade de preço — atenção
 `per1000Liters` é **reais por 1.000 litros (R$/m³)**, não por mililitro.
@@ -95,7 +105,6 @@ página duplicada. O HTML nasce com a variante `emergencia`, que é a indexada.
 
 | Para ativar | Onde |
 |---|---|
-| Domínio (canonical, og:url, og:image) | `business.website.url` em `app.js` |
 | Envio do formulário para CRM/webhook | `business.leadEndpoint` em `app.js` |
 | Cidades e bairros atendidos | `business.cities` em `app.js` |
 | GA4 / Google Ads | bloco comentado no `<head>` do `index.html` |

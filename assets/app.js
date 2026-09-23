@@ -64,13 +64,13 @@
     leadEndpoint: "",
 
     /* ------------------------------------------------------
-       Domínio final. Vazio = sem deploy ainda.
-       Enquanto estiver vazio NÃO geramos canonical, og:url nem
-       og:image absoluta — canonical apontando para domínio errado
-       é pior do que canonical nenhuma.
+       Domínio. Usa a URL do Vercel enquanto pgwpiscinas.com não é
+       registrado — é real e estável, então canonical/og:url/og:image
+       podem apontar pra ela sem risco. Quando o domínio próprio
+       entrar no ar, troque aqui (e conecte-o no projeto do Vercel).
        ------------------------------------------------------ */
     website: {
-      url: "",
+      url: "https://pgw-piscinas.vercel.app",
       ogImage: "uploads/piscina1.jpg"
     }
   };
